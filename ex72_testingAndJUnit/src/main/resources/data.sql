@@ -1,0 +1,2 @@
+INSERT INTO student(name, program) VALUES
+('Abhi', 'Software Development and Network Engineering'), ('Simon', 'Software Development and Network Engineering'), ('Hao', 'Kinesiology'), ('Jaspreet', 'Police Foundation'); 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="../static/style.css" th:href="@{/style.css}" >
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Program</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="s:${studentList}">
+				<td th:text="${s.id}">1</td>
+				<td th:text="${s.name}">Jones</td>
+				<td th:text="${s.program}">SDNE</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<form method="post" action="#" th:action="@{/insertStudent}"
+		th:object="${student}" class="form">
+		<input type="hidden" name="id" th:field="*{id}" /> <br> Name: <br>
+		<input type="text" name="name" th:field="*{name}" /> <br>
+		Program: <br>
+		<input type="text" name="program" th:field="*{program}" /> <br> <input
+			type="submit" value="Go!" />
+	</form>
+</body>
+</html>
